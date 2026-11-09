@@ -1,21 +1,27 @@
 function Header() {
+   const { user } = steamData;
+   const { icons: icon } = steamData.app;
+   const { logo } = steamData.app;
    return /*html*/ `
-   <div class="header flex row">
-      <img src="/public/images/logo.png">
+   <div class="header flex row align-center jusitfy-between">
+      <img src="${logo}">
+      
       <h2>STORE</h2>
       <h2>COMMUNITY</h2>
       <h2>JUXTOPPOSED</h2>
       <h2>LIBRARY</h2>
       <h2>DOWNLOADS</h2>
 
-      <img src="/public/icons/people_icon.png">
-      <img src="/public/icons/notification_icon.png">
+      <img src="${icon.people}">
+      <img src="${icon.notifications}">
 
-      <button class="flex row padding-1">
-         <img src="/public/images/avatar.png">
-         <p>Juxtopposed</p>
-         <p>$5.25</p>
-         <img src="/public/icons/arrow_icon.png">
+      <button>
+         <div class="flex row">
+         <img src="${user.avatar}">
+         <p>${user.username}</p>
+         <p>${user.walletBalance}</p>
+         <img src="${icon.arrow}">
+         </div>
       </button>
   </div>`;
 }
