@@ -15,13 +15,11 @@ function Header() {
       <img src="${icon.people}">
       <img src="${icon.notifications}">
 
-      <button>
-         <div class="flex row">
-         <img src="${user.avatar}">
-         <p>${user.username}</p>
-         <p>${user.walletBalance}</p>
-         <img src="${icon.arrow}">
-         </div>
+      <button class="flex row">
+            <img src="${user.avatar}">
+            <p>${user.username}</p>
+            <p>${user.walletBalance}</p>
+            <img src="${icon.arrow}">
       </button>
   </div>`;
 }
