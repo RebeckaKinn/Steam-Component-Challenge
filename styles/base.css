@@ -1,7 +1,15 @@
 * {
-  box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+:root {
+   --color1: #171a21;
+   --color2: #66c0f4;
+   --color3: #1b2838;
+   --color4: #2a475e;
+   --color5: #c7d5e0;
 }
 
 body {
-  margin: 0;
+   margin: 0;
 }
