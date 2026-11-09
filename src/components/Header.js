@@ -13,7 +13,6 @@ function Header() {
          <h3>${nav[3].label}</h3>
          <h3>${nav[4].label}</h3>
       </div>
-      <div class="header-whitespace"></div>
       
       <div class="flex row align-center justify-between gap-small">
          <button class="flex row align-center justify-between">
@@ -22,9 +21,10 @@ function Header() {
 
          <button class="flex row align-center justify-between">
             <img src="${icon.notifications}">
+            <div class="notification">${user.notifications}</div>
          </button>
 
-         <button class="flex row align-center justify-between">
+         <button class="flex row align-center justify-evenly gap-small">
                <img src="${user.avatar}">
                <p>${user.username}</p>
                <p>${user.walletBalance}</p>
