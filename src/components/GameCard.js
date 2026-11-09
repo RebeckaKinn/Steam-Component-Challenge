@@ -2,11 +2,11 @@ const { topSellers } = steamData;
 function TopSellers() {
   return `
   <h1>Top Sellers</h1>
+  <article aria-label="top-sellers">
   <ul>${topSellers.map(topSeller => /*HTML*/
     `<li>
       <img src=${topSeller.image} alt=""> 
       <h2>${topSeller.title}</h2>
-      <article>
         ${topSeller.platform === "windows"
       ? `svgsakWindow`
       : `svgsak2`} 
@@ -25,5 +25,6 @@ function TopSellers() {
       >${price}</span>`).join("")} 
           <button>${topSeller.isWishlisted ? '&#x2665;&#xfe0e;' : '&#x2661;'}</button>
       </p>
-    </li>`).join("")}</ul>`;
+    </li>`).join("")}</ul>
+    </article>`;
 }
